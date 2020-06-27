@@ -17,19 +17,15 @@ public class Products {
 
     }
 
-    public void addProducts(int quantityAdded) {
+    public void addProducts(int quantity) {
 
-        quantityAdded = quantityAdded + quantity;
-        quantity = quantityAdded;
-        showResult(name, price, quantityAdded, totalValue());
+        this.quantity += quantity;
 
     }
 
-    public void removeProducts(int quantityRemoved) {
+    public void removeProducts(int quantity) {
 
-        quantityRemoved = quantity - quantityRemoved;
-        quantity = quantityRemoved;
-        showResult(name, price, quantityRemoved, totalValue());
+        this.quantity -= quantity;
 
     }
 

@@ -8,29 +8,34 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Products products;
-        products = new Products();
+        Products product;
+        product = new Products();
 
         System.out.println("Enter the product data: ");
         System.out.println("Name: ");
-        products.name = sc.nextLine();
+        product.name = sc.nextLine();
         System.out.println("Price: ");
-        products.price = sc.nextDouble();
+        product.price = sc.nextDouble();
         System.out.println("Quantity in stock: ");
-        products.quantity = sc.nextInt();
+        product.quantity = sc.nextInt();
 
-        double totalValue = products.totalValue();
+        double totalValue = product.totalValue();
 
-        products.showResult(products.name, products.price, products.quantity, totalValue);
+        product.showResult(product.name, product.price, product.quantity, totalValue);
 
-        System.out.println("Enter the number of products to be added in stock: ");
-
+        System.out.println("Enter the number of product to be added in stock: ");
         int quantityAdded = sc.nextInt();
-        products.addProducts(quantityAdded);
 
-        System.out.println("Enter the number of products to be removed from stock:");
+        product.addProducts(quantityAdded);
+
+        product.showResult(product.name, product.price, product.quantity, product.totalValue());
+
+        System.out.println("Enter the number of product to be removed from stock:");
         int quantityRemoved = sc.nextInt();
-        products.removeProducts(quantityRemoved);
+
+        product.removeProducts(quantityRemoved);
+
+        product.showResult(product.name, product.price, product.quantity, product.totalValue());
 
 
         sc.close();
