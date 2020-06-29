@@ -11,11 +11,7 @@ public class Products {
 
         return result;
     }
-    public void showResult(String name, double price, int quantity, double totalValue) {
-
-        System.out.printf("Product Data: %s, $ %.2f, %d unit, Total: %.2f%n", name, price, quantity, totalValue);
-
-    }
+   
 
     public void addProducts(int quantity) {
 
@@ -27,6 +23,16 @@ public class Products {
 
         this.quantity -= quantity;
 
+    }
+    public String toString() {
+
+        return name
+                + ", $ "
+                + String.format("%.2f", price)
+                + ", "
+                + quantity
+                + " unit, Total: "
+                + String.format("%.2f", totalValue());
     }
 
 

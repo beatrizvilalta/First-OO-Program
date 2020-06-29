@@ -21,21 +21,21 @@ public class Main {
 
         double totalValue = product.totalValue();
 
-        product.showResult(product.name, product.price, product.quantity, totalValue);
+        System.out.println("Product data: " + product);
 
         System.out.println("Enter the number of product to be added in stock: ");
         int quantityAdded = sc.nextInt();
 
         product.addProducts(quantityAdded);
 
-        product.showResult(product.name, product.price, product.quantity, product.totalValue());
+        System.out.println("Updated data: " + product;
 
         System.out.println("Enter the number of product to be removed from stock:");
         int quantityRemoved = sc.nextInt();
 
         product.removeProducts(quantityRemoved);
 
-        product.showResult(product.name, product.price, product.quantity, product.totalValue());
+        System.out.println("Updated data: " + product);
 
 
         sc.close();
